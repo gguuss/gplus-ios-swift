@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XML-6k-LAm">
-                                <rect key="frame" x="43" y="80" width="47" height="30"/>
+                                <rect key="frame" x="43" y="51" width="47" height="30"/>
                                 <state key="normal" title="Sign in">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -27,9 +27,15 @@
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0sd-h5-izL">
                                 <rect key="frame" x="43" y="172" width="51" height="31"/>
+                                <connections>
+                                    <action selector="toggleFetchEmailClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="mN9-lf-EIM"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TDx-rf-WB0">
                                 <rect key="frame" x="43" y="236" width="51" height="31"/>
+                                <connections>
+                                    <action selector="toggleUserId:" destination="BYZ-38-t0r" eventType="valueChanged" id="vaB-qU-lmZ"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fetch User ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sb-at-9yv">
                                 <rect key="frame" x="122" y="241" width="106" height="21"/>
@@ -44,10 +50,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeR-za-ptd">
-                                <rect key="frame" x="43" y="118" width="60" height="30"/>
+                                <rect key="frame" x="43" y="80" width="60" height="30"/>
                                 <state key="normal" title="Sign Out">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JUb-lR-0jh"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="No user data ..." translatesAutoresizingMaskIntoConstraints="NO" id="NZU-2W-IBe">
                                 <rect key="frame" x="194" y="310" width="119" height="93"/>
@@ -73,11 +82,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAP-Jn-QaZ">
+                                <rect key="frame" x="43" y="110" width="78" height="30"/>
+                                <state key="normal" title="Disconnect">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="disconnect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hQf-f3-MJx"/>
+                                    <action selector="signOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lvf-X7-ffj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="disconnectButton" destination="aAP-Jn-QaZ" id="EbE-b5-xlN"/>
                         <outlet property="emailDataField" destination="mBU-mB-5cF" id="Zyh-cE-OcE"/>
+                        <outlet property="signOutButton" destination="LeR-za-ptd" id="YW6-Lw-402"/>
                         <outlet property="signinButton" destination="XML-6k-LAm" id="uWk-Uk-Bw2"/>
                         <outlet property="toggleFetchEmail" destination="0sd-h5-izL" id="N8p-hr-cft"/>
                         <outlet property="toggleFetchUserID" destination="TDx-rf-WB0" id="SKh-Oj-Kqe"/>
