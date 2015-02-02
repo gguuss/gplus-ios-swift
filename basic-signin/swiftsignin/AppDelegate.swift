@@ -50,16 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    /*- (BOOL)application: (UIApplication *)application
-    openURL: (NSURL *)url
-    sourceApplication: (NSString *)sourceApplication
-    annotation: (id)annotation {
-    return [GPPURLHandler handleURL:url
-    sourceApplication:sourceApplication
-    annotation:annotation];
-    }*/
 
+    // Added to handle the Authorization code returned from sign-in.
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
         return GPPURLHandler.handleURL(url, sourceApplication: sourceApplication, annotation: annotation);
     }

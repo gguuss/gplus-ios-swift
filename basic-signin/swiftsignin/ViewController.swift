@@ -20,13 +20,16 @@ import UIKit
 
 
 class ViewController: UIViewController, GPPSignInDelegate {
+
+    var kClientId = "REPLACE_CLIENT_ID"; // Get this from https://console.developers.google.com
+
     @IBOutlet weak var toggleFetchEmail: UISwitch!
     @IBOutlet weak var toggleFetchUserID: UISwitch!
-    
+
     @IBOutlet weak var signinButton: UIButton!
     @IBOutlet weak var signOutButton: UIButton!
     @IBOutlet weak var disconnectButton: UIButton!
-    
+
     @IBOutlet weak var emailDataField: UITextView!
     @IBOutlet weak var userData: UITextView!
 
@@ -36,7 +39,7 @@ class ViewController: UIViewController, GPPSignInDelegate {
       // Configure the sign in object.
       var signIn = GPPSignIn.sharedInstance();
       signIn.shouldFetchGooglePlusUser = true;
-      signIn.clientID = "REPLACE_CLIENT_ID"; // Get this from https://console.developers.google.com
+      signIn.clientID = kClientId;
       signIn.shouldFetchGoogleUserEmail = toggleFetchEmail.on;
       signIn.shouldFetchGoogleUserID = toggleFetchUserID.on;
       signIn.scopes = [kGTLAuthScopePlusLogin];
@@ -47,45 +50,45 @@ class ViewController: UIViewController, GPPSignInDelegate {
       updateUI();
     }
 
-    
+
     @IBAction func signInClicked(sender: AnyObject) {
       var signIn = GPPSignIn.sharedInstance();
       signIn.authenticate();
     }
 
-    
+
     func finishedWithAuth(auth: GTMOAuth2Authentication!, error: NSError!) {
       updateUI();
     }
 
-    
+
     override func didReceiveMemoryWarning() {
       super.didReceiveMemoryWarning()
       // Dispose of any resources that can be recreated.
     }
 
-    
+
     @IBAction func toggleFetchEmailClick(sender: AnyObject) {
       GPPSignIn.sharedInstance().shouldFetchGoogleUserEmail = toggleFetchEmail.on;
     }
 
-    
+
     @IBAction func toggleUserId(sender: AnyObject) {
       GPPSignIn.sharedInstance().shouldFetchGoogleUserID = toggleFetchUserID.on;
     }
-    
+
 
     @IBAction func disconnect(sender: AnyObject) {
       GPPSignIn.sharedInstance().disconnect();
       updateUI();
     }
-    
-    
+
+
     @IBAction func signOut(sender: AnyObject) {
         GPPSignIn.sharedInstance().signOut();
         updateUI();
     }
-    
+
     func updateUI() {
       // TODO: Toggle buttons here.
       if (GPPSignIn.sharedInstance().userID != nil){
@@ -97,7 +100,7 @@ class ViewController: UIViewController, GPPSignInDelegate {
         } else {
           emailDataField.text = "no email";
         }
-        
+
         signOutButton.enabled = true;
         disconnectButton.enabled = true;
         signinButton.enabled = true;
