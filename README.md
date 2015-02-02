@@ -4,6 +4,10 @@ Demonstration of how to use a bridging header for Google+ Sign-In (iOS and Swift
 There are two projects: one showing just Google+ Sign-in and the other showing
 how to use Google Play Games Services from Swift.
 
+Note that the samples require the Google+ and Google Play Games SDK is
+uncompressed into the appropriate folder. Get them from the
+[Google Play Games downloads page](https://developers.google.com/games/services/downloads/).
+
 ## Quick Setup
 
 1. Get a client ID from https://console.deveopers.google.com for Google+ or from
