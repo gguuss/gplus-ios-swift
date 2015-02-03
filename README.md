@@ -9,26 +9,23 @@ uncompressed into the appropriate folder. Get them from the
 [Google Play Games downloads page](https://developers.google.com/games/services/downloads/).
 
 ## Quick Setup
-
 1. Get a client ID from https://console.deveopers.google.com for Google+ or from
   https://play.google.com/apps/publish for Google Play Games.
-2. For the bundle ID, set it to com.gclassy.swiftsignin.
+2. For the bundle ID, set it to `com.gclassy.swiftsignin`.
 3. Copy the client ID into the Swift app in the ViewController.
 4. Run the app.
 
-
 ## Full Setup
-
 1. Modify the bundle identifier in the project to something more appropriate
-  for your domain / aps.
+  for your domain / apps. **Note** You will need this value later.
+
 2. Update the Scheme defined in the URL handlers in info.plist to match your
-  bundle identifier.
+  bundle identifier. **Note** Don't skip this step.
 3. Register your application with your bundle identifier on
   https://console.developers.google.com for Google+ or
   https://play.google.com/apps/publish for Google Play Games.
 4. Copy the client ID into the Swift app in the ViewController.
 5. Run the app and sign-in.
-
 
 ## Troubleshooting
 * If your application is failing after sign-in, you most likely have
