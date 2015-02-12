@@ -2,13 +2,15 @@
 Demonstration of how to use a bridging header for Google+ Sign-In (iOS and Swift).
 
 There are two projects: one showing just Google+ Sign-in and the other showing
-how to use Google Play Games Services from Swift.
+how to use Google Play Games Services from Swift. The main difference between
+the two is that Google Play Games Services has additional callbacks and uses
+GPGManager wheras Google+ uses GPPSignin.
 
 Note that the samples require the Google+ and Google Play Games SDK is
 uncompressed into the appropriate folder. Get them from the
 [Google Play Games downloads page](https://developers.google.com/games/services/downloads/).
 
-## Quick Setup
+## Quick Setup (Basic Sample)
 1. Get a client ID from https://console.deveopers.google.com for Google+ or from
   https://play.google.com/apps/publish for Google Play Games.
 2. For the bundle ID, set it to `com.gclassy.swiftsignin`.
@@ -18,7 +20,6 @@ uncompressed into the appropriate folder. Get them from the
 ## Full Setup
 1. Modify the bundle identifier in the project to something more appropriate
   for your domain / apps. **Note** You will need this value later.
-
 2. Update the Scheme defined in the URL handlers in info.plist to match your
   bundle identifier. **Note** Don't skip this step.
 3. Register your application with your bundle identifier on
