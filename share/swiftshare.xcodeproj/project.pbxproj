@@ -21,6 +21,7 @@
 		4B2C8A351A7C4B1C002C2518 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2C8A341A7C4B1C002C2518 /* SystemConfiguration.framework */; };
 		4B2C8A371A7C4B25002C2518 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2C8A361A7C4B25002C2518 /* libc++.dylib */; };
 		4B2C8A391A7C4B2D002C2518 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2C8A381A7C4B2D002C2518 /* libz.dylib */; };
+		4B8E52911A9E38D600B2C97C /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4B8E52901A9E38D600B2C97C /* GooglePlus.bundle */; };
 		4BB038271A3BDA310040B606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB038261A3BDA310040B606 /* AppDelegate.swift */; };
 		4BB038291A3BDA310040B606 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB038281A3BDA310040B606 /* ViewController.swift */; };
 		4BB0382C1A3BDA310040B606 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB0382A1A3BDA310040B606 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		4B2C8A341A7C4B1C002C2518 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4B2C8A361A7C4B25002C2518 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		4B2C8A381A7C4B2D002C2518 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4B8E52901A9E38D600B2C97C /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlus.bundle; path = "google-plus-ios-sdk-1.7.1/GooglePlus.bundle"; sourceTree = "<group>"; };
 		4BB038211A3BDA310040B606 /* swiftshare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftshare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB038251A3BDA310040B606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BB038261A3BDA310040B606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		4BB038181A3BDA310040B606 = {
 			isa = PBXGroup;
 			children = (
+				4B8E52901A9E38D600B2C97C /* GooglePlus.bundle */,
 				4B2C8A381A7C4B2D002C2518 /* libz.dylib */,
 				4B2C8A361A7C4B25002C2518 /* libc++.dylib */,
 				4B2C8A341A7C4B1C002C2518 /* SystemConfiguration.framework */,
@@ -293,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B8E52911A9E38D600B2C97C /* GooglePlus.bundle in Resources */,
 				4BB0382C1A3BDA310040B606 /* Main.storyboard in Resources */,
 				4BB038311A3BDA310040B606 /* LaunchScreen.xib in Resources */,
 				4BB0382E1A3BDA310040B606 /* Images.xcassets in Resources */,
