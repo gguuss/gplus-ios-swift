@@ -1,3 +1,5 @@
+**Notice** [Google+ API is shutting down on March 7th, 2019](https://developers.google.com/+/api-shutdown).
+
 # Google+ iOS Demo using Swift and a Bridging Header
 Demonstration of how to use a bridging header for Google+ Sign-In (iOS and Swift).
 
